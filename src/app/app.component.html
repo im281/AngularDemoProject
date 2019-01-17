@@ -1,7 +1,13 @@
-<hello helloName="{{ appName }}"></hello>
-<p class = ex1-style>
-  We pass the name variable as input to the hello.component
-  For example replace name= double curly braces with name = "test"
-  and see what happens. Note the style sheet specific to the text
-</p>
-<app-ex1></app-ex1>
+<nav class='navbar navbar-expand navbar-light bg-light'>
+  <a class='navbar-brand'>{{pageTitle}}</a>
+  <ul class='nav nav-pills'>
+      <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/welcome']">Home</a></li>
+      <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/ex1']">Excersise 1</a></li>
+  </ul>
+</nav>
+<div class='container'>
+  <router-outlet></router-outlet>
+</div>
+
+
+

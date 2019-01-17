@@ -12,3 +12,6 @@ ng g m folder/moduleName --flat -m folder/exampleModule
 
 ng g c app/excersise1 --flat
 ng g m excersise-1/module-1 -m app/app.module
+
+//create component in hello folder under app
+g g c hello
