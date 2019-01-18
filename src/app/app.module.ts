@@ -12,6 +12,8 @@ import { Ex2Component } from './ex2/ex2.component';
 import { Ex2childComponent } from './ex2/ex2child.component';
 import { Ex3Component } from './ex3/ex3.component';
 import { Ex3childComponent } from './ex3/ex3child.component';
+import { NavComponent } from './nav/nav.component';
+import { Ex4Component } from './ex4/ex4.component';
 
 
 
@@ -24,11 +26,13 @@ import { Ex3childComponent } from './ex3/ex3child.component';
       { path: 'ex1', component: Ex1Component },
       { path: 'ex2', component: Ex2Component },
       { path: 'ex3', component: Ex3Component },
+      { path: 'ex4', component: Ex4Component },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ]),
   ],
-  declarations: [ AppComponent, HomeComponent, HelloComponent,Ex1Component, Ex1childComponent, Ex2Component, Ex2childComponent, Ex3Component, Ex3childComponent ],
+  declarations: [ AppComponent, HomeComponent, HelloComponent,Ex1Component, 
+    Ex1childComponent, Ex2Component, Ex2childComponent, Ex3Component, Ex3childComponent, NavComponent, Ex4Component ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

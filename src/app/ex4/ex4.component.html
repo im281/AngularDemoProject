@@ -1,0 +1,18 @@
+<div>
+  <h1>Repeating Data with *ngFor loop which is a structural directive (adding or removing elements to the DOM)</h1>
+  <p>Using ng for
+  </p>
+</div>
+<div *ngFor="let event of events">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <p class="card-text">Event: {{event.name}}</p>
+          <p class="card-text">Date: {{event.date}}</p>
+          <p class="card-text">Time: {{event.time}}</p>
+          <p class="card-text">
+            Address: <ex1-child [address]="event.location"></ex1-child>
+          </p>
+        </div>
+      </div>
+</div>
+

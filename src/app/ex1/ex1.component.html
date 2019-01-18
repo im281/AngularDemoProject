@@ -1,22 +1,51 @@
-<div><h1>Communicating with Child Components Using @Input</h1>
+<div>
+  <h1>Communicating with Child Components Using @Input</h1>
   <p>In this example we have a parent and child component
     The parent displays event name data and time properties. However,
     the address is passed to the child component as the [address] variable
-    so teh child component will show the address part
+    so the child component will show the address part
   </p>
 </div>
-<div>
-    <div style="margin-top:30px">
-      Event: {{event.name}} 
-    </div>
-    <div>
-      Date: {{event.date}}
-    </div>
-    <div>
-      Time: {{event.time}}
-    </div>
-    <div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <p class="card-text">Event: {{event.name}}</p>
+    <p class="card-text">Date: {{event.date}}</p>
+    <p class="card-text">Time: {{event.time}}</p>
+    <p class="card-text">
       Address: <ex1-child [address]="event.location"></ex1-child>
-    </div>
+    </p>
   </div>
-  
+</div>
+<div>
+  <h2>With component-specific css styling</h2>
+</div>
+<div class="outer">
+  <div class="inner">
+    Event:
+  </div>
+  <div>
+    Date:
+  </div>
+  <div>
+    Time:
+  </div>
+  <div>
+    Address:
+  </div>
+</div>
+
+<div class="outer values">
+  <div class="inner">
+    {{event.name}}
+  </div>
+  <div>
+    {{event.date}}
+  </div>
+  <div>
+    {{event.time}}
+  </div>
+  <div>
+    {{event.location.address}}, {{event.location.city}}, {{event.location.country}}
+  </div>
+</div>
+
