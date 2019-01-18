@@ -5,6 +5,18 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './ex1.component.html',
   styleUrls: ['./ex1.component.css']
 })
-export class Ex1Component {
-  event = {name:'ngConf 2025', date: '3/1/2025', time: '8am', location: {address: '123 Main St', city: 'Salt Lake City, UT', country: 'USA'}}
+export class Ex1Component implements OnInit {
+
+  event = {name:'ngConf 2025', 
+           date: '3/1/2025', 
+           time: '8am', 
+           location: {address: '123 Main St', 
+                      city: 'Salt Lake City, UT', 
+                      country: 'USA'}}
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }

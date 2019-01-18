@@ -1,21 +1,22 @@
-<div>In this example we are displaying the component's properties</div>
-
-<div>
-  <h1>Congratulations! This is your first component!</h1>
-  <h4>You got your component to display!</h4>
-  <hr>
-  <h5>How does your event look below?</h5>
-
-  <div style="margin-top:30px">
-    Event: {{event.name}}
-  </div>
-  <div>
-    Date: {{event.date}}
-  </div>
-  <div>
-    Time: {{event.time}}
-  </div>
-  <div>
-    Address: {{event.location.address}}, {{event.location.city}}, {{event.location.country}}
-    </div>
+<div><h1>Communicating with Child Components Using @Input</h1>
+  <p>In this example we have a parent and child component
+    The parent displays event name data and time properties. However,
+    the address is passed to the child component as the [address] variable
+    so teh child component will show the address part
+  </p>
 </div>
+<div>
+    <div style="margin-top:30px">
+      Event: {{event.name}} 
+    </div>
+    <div>
+      Date: {{event.date}}
+    </div>
+    <div>
+      Time: {{event.time}}
+    </div>
+    <div>
+      Address: <ex1-child [address]="event.location"></ex1-child>
+    </div>
+  </div>
+  
